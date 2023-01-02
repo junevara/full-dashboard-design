@@ -54,9 +54,9 @@ body, html {
 .sidebar .wrapper {
     height: 60%;
     display: grid;
-    grid-template-columns: 100%;
+    
     grid-template-rows: 1fr 4fr;
-    grid-template-columns: 1fr 4fr 4fr;
+    grid-template-columns: 1fr 4fr;
     gap: 20px;
     
 }
@@ -146,13 +146,13 @@ body, html {
     
 }
 
-.main-content .wrapper {
+.main-content > .left {
     display: grid;
     grid-template-rows: 1fr 19fr;
     grid-template-columns: 1fr;
 }
 
-.main-content .wrapper .projects {
+.main-content > .left .projects {
     
     display: grid;
     gap: 20px;
@@ -163,7 +163,7 @@ body, html {
     width: 90%;
 }
 
-.main-content .wrapper h1{
+.main-content > .left h1{
     grid-area: 1 / 1 / 2 / 3;
     font-size: 20px;
     margin: 0;
@@ -282,12 +282,15 @@ body, html {
    
 }
 
-.main-content .right .wrapper {
+.main-content .right .wrapper1 {
 
     padding: 15px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 2px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
 }
 
@@ -301,6 +304,81 @@ body, html {
     grid-template-rows: 1fr 9fr;
     margin-top: 15px;
 }
+
+.announcements .wrapper1 .announcement h2 {
+    font-size: 15px;
+    margin: 0;
+    
+}
+
+.announcements .wrapper1 .announcement p {
+    margin: 0;
+    height: 50px;
+    width: 90%;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* after 3 line show ... */
+    -webkit-box-orient: vertical;
+    
+    
+}
+
+.trending .wrapper2 {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px grey;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    
+}
+
+.trending .wrapper2 .left {
+    grid-area: 1 / 1 / 5 / 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+   
+}
+
+.trending .wrapper2 .right {
+    grid-area: 1 / 2 / 5 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+    
+}
+
+.trending .wrapper2 .right p{
+    margin: 0;
+    padding: 0;
+}
+
+.announcements .wrapper1 .announcement:first-child, .announcements .wrapper1 .announcement:nth-child(2) {
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+
+.trending .wrapper2 .left img{
+    width: 40px;
+}
+
+.trending .wrapper2 .right div p:first-child {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.trending .wrapper2 .right div p:last-child {
+    font-size: 15px;
+    
+}
+
 
 
 
